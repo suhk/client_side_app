@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <title></title>
   </head>
-  <body>
+  <body data-ng-app="clockApp">
     <h1>Date</h1>
-    <p id="date"></p>
-
-    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <p id="date" data-ng-controller="clockController">{{time}}</p>
+    <button type="button" id="sub" ng-click="timeZone = timeZone - 1" ng-init="timeZone = 0">Subtract Hour</button>
+    <button type="button" id="add" ng-click="timeZone = timeZone + 1" ng-init="timeZone = 0">Add Hour</button>
     <script src='bundle.js'></script>
   </body>
 </html>
